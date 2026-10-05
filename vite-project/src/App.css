@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0f0f0f;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #39ff88;
+}
+
+input {
+  background: #181818;
+  color: #ffffff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px 15px;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #39ff88;
+}
+
+button {
+  background: #39ff88;
+  color: #0f0f0f;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 35px;
+  padding: 20px;
+  background: #151515;
+  border: 1px solid #292929;
+  border-radius: 12px;
+}
+
+.search {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.user-card {
+  background: #151515;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.user-card h2 {
+  margin-top: 0;
+  color: #39ff88;
+}
+
+.user-card p {
+  color: #bdbdbd;
+  margin: 8px 0;
+}
+
+.loading {
+  color: #39ff88;
+}
+
+.error {
+  color: #ff5555;
+}
+
+@media (max-width: 700px) {
+  .app {
+    width: 92%;
+    padding: 30px 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+
+  input,
+  button {
+    width: 100%;
+  }
+}
